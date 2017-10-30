@@ -5,7 +5,10 @@
 
 public class Engineer extends Employee {
 
-    private int salary;
+    private double salary;
+    private int overtimeHours;
+    private int overtimeRate;
+    private boolean newProduct;
 
     public Engineer(){
         super();

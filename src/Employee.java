@@ -12,6 +12,11 @@ public class Employee {
     private String address;
     private int phoneNum;
     private int SSN;
+    private int monthlyPay;
+    private int annualSalary;
+    private int actualPay;
+    private int tax;
+
 
     public Employee(){ // constructor to initialize each variable created
         firstname = "";
