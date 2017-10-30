@@ -1,12 +1,19 @@
+
+/**
+ * The super class Employee which holds the general information for an
+ * employee as well as the methods to calculate their different payments
+ */
+
 public class Employee {
 
+    //declaration of variables
     private String firstname;
     private String lastname;
     private String address;
     private int phoneNum;
     private int SSN;
 
-    public Employee(){
+    public Employee(){ // constructor to initialize each variable created
         firstname = "";
         lastname = "";
         address = "";
@@ -22,10 +29,26 @@ public class Employee {
         this.SSN = SSN;
     }
 
-    public void monthPayment(){
+    public void monthPayment(){ // method to calculate the particular employees monthly payment
 
     }
 
+    public int annualSalary(){ // method to calculate the employees annual salary
+
+        return 0;
+    }
+
+    public int actualPay(){ // method to calculate the actual payment of an employee
+
+        return 0;
+    }
+
+
+
+    /**
+     * All of my getters and setters for each variable created
+     * @return
+     */
     public String getFirstname() {
         return firstname;
     }
