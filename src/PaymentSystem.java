@@ -14,11 +14,18 @@ public class PaymentSystem extends JFrame {
     private JButton button1;
     private JPanel panelMain;
     private JTextField textFirstName;
-    private JComboBox comboBox;
+    private JComboBox employeeType;
     private JTextField textSSN;
     private JTextField textLastName;
     private JTextField textAddress;
     private JTextField textPhoneNum;
+    private JCheckBox newProductCheckBox;
+    private JCheckBox performanceCheckBox;
+    private JTextField textField1;
+    private JButton button2;
+    private JButton clearFormButton;
+    private JButton displayAnnualPayManagerButton;
+    private JButton displayAnnualPayEngineerButton;
 
     public PaymentSystem() {
 

@@ -11,7 +11,7 @@ public class Employee {
     private String lastname;
     private String address;
     private int phoneNum;
-    private int SSN;
+    private String SSN; // made a string since SSN's have -'s ex. 123-45-6789
     private int monthlyPay;
     private int annualSalary;
     private int actualPay;
@@ -23,10 +23,14 @@ public class Employee {
         lastname = "";
         address = "";
         phoneNum = 0;
-        SSN = 0;
+        SSN = "";
+        monthlyPay = 0;
+        annualSalary = 0;
+        tax = 20;
+
     }
 
-    public Employee(String firstname, String lastname, String address, int phoneNum, int SSN){
+    public Employee(String firstname, String lastname, String address, int phoneNum, String SSN){
         this.firstname = firstname;
         this.lastname = lastname;
         this.address = address;
@@ -34,18 +38,23 @@ public class Employee {
         this.SSN = SSN;
     }
 
-    public void monthPayment(){ // method to calculate the particular employees monthly payment
+
+    public void calculateMonthlyPayment(){ // method to calculate the particular employees monthly payment
 
     }
 
-    public int annualSalary(){ // method to calculate the employees annual salary
+    public int calculateAnnualSalary(){ // method to calculate the employees annual salary
 
         return 0;
     }
 
-    public int actualPay(){ // method to calculate the actual payment of an employee
+    public int calculateActualPay(){ // method to calculate the actual payment of an employee
 
         return 0;
+    }
+
+    public String Display(){
+        return "";
     }
 
 
@@ -54,6 +63,7 @@ public class Employee {
      * All of my getters and setters for each variable created
      * @return
      */
+
     public String getFirstname() {
         return firstname;
     }
@@ -86,11 +96,44 @@ public class Employee {
         this.phoneNum = phoneNum;
     }
 
-    public int getSSN() {
+    public String getSSN() {
         return SSN;
     }
 
-    public void setSSN(int SSN) {
+    public void setSSN(String SSN) {
         this.SSN = SSN;
     }
+
+    public int getMonthlyPay() {
+        return monthlyPay;
+    }
+
+    public void setMonthlyPay(int monthlyPay) {
+        this.monthlyPay = monthlyPay;
+    }
+
+    public int getAnnualSalary() {
+        return annualSalary;
+    }
+
+    public void setAnnualSalary(int annualSalary) {
+        this.annualSalary = annualSalary;
+    }
+
+    public int getActualPay() {
+        return actualPay;
+    }
+
+    public void setActualPay(int actualPay) {
+        this.actualPay = actualPay;
+    }
+
+    public int getTax() {
+        return tax;
+    }
+
+    public void setTax(int tax) {
+        this.tax = tax;
+    }
+
 }
