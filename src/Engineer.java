@@ -5,16 +5,24 @@
 
 public class Engineer extends Employee {
 
-    private double salary;
+    private int salary;
     private boolean newProduct;
 
     public Engineer(){
         super();
+        salary = 120500;
+        newProduct = false;
+    }
+
+    public Engineer(boolean newProduct){
+        super();
+        salary = 120500;
+        this.newProduct = newProduct;
     }
 
     @Override
     public String Display(){
-        return "";
+        return "testing engineer";
     }
 
 
@@ -24,11 +32,11 @@ public class Engineer extends Employee {
      * @return
      */
 
-    public double getSalary() {
+    public int getSalary() {
         return salary;
     }
 
-    public void setSalary(double salary) {
+    public void setSalary(int salary) {
         this.salary = salary;
     }
 

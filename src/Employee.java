@@ -10,7 +10,7 @@ public class Employee {
     private String firstname;
     private String lastname;
     private String address;
-    private int phoneNum;
+    private String phoneNum;
     private String SSN; // made a string since SSN's have -'s ex. 123-45-6789
     private int monthlyPay;
     private int annualSalary;
@@ -22,7 +22,7 @@ public class Employee {
         firstname = "";
         lastname = "";
         address = "";
-        phoneNum = 0;
+        phoneNum = "";
         SSN = "";
         monthlyPay = 0;
         annualSalary = 0;
@@ -30,7 +30,7 @@ public class Employee {
 
     }
 
-    public Employee(String firstname, String lastname, String address, int phoneNum, String SSN){
+    public Employee(String firstname, String lastname, String address, String phoneNum, String SSN){
         this.firstname = firstname;
         this.lastname = lastname;
         this.address = address;
@@ -39,8 +39,9 @@ public class Employee {
     }
 
 
-    public void calculateMonthlyPayment(){ // method to calculate the particular employees monthly payment
-
+    public int calculateMonthlyPayment(int pay){ // method to calculate the particular employees monthly payment
+        monthlyPay = (pay/12) * tax;
+        return monthlyPay;
     }
 
     public int calculateAnnualSalary(){ // method to calculate the employees annual salary
@@ -54,7 +55,7 @@ public class Employee {
     }
 
     public String Display(){
-        return "";
+        return "testing\n"+"new line";
     }
 
 
@@ -88,11 +89,11 @@ public class Employee {
         this.address = address;
     }
 
-    public int getPhoneNum() {
+    public String getPhoneNum() {
         return phoneNum;
     }
 
-    public void setPhoneNum(int phoneNum) {
+    public void setPhoneNum(String phoneNum) {
         this.phoneNum = phoneNum;
     }
 

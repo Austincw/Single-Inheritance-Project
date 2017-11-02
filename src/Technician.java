@@ -11,14 +11,24 @@ public class Technician extends Employee {
 
     public Technician(){
         super();
-        salary = 0;
+        salary = 110850;
         overTimeHours = 0;
         overTimeRate = 1.5;
     }
 
+    public Technician(int overTimeHours){
+        super();
+        salary = 110850;
+        overTimeRate = 1.5;
+        this.overTimeHours = overTimeHours;
+    }
+
+
     @Override
     public String Display(){
-        return "";
+
+
+        return "testing technician";
     }
 
 

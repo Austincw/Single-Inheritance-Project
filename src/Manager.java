@@ -7,15 +7,22 @@ public class Manager extends Employee {
 
     private int salary;
     private double bonus;
-    private boolean performace;
+    private boolean performance;
 
     public Manager(){
         super();
+        salary = 140080;
+    }
+
+    public Manager(boolean performance){
+        super();
+        salary = 140080;
+        this.performance = performance;
     }
 
     @Override
     public String Display(){
-        return "";
+        return "testing manager";
     }
 
 
@@ -41,14 +48,13 @@ public class Manager extends Employee {
         this.bonus = bonus;
     }
 
-    public boolean isPerformace() {
-        return performace;
+    public boolean isPerformance() {
+        return performance;
     }
 
-    public void setPerformace(boolean performace) {
-        this.performace = performace;
+    public void setPerformance(boolean performance) {
+        this.performance = performance;
     }
-    //add display method
 
 
 }
