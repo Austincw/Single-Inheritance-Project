@@ -37,19 +37,57 @@ public class PaymentSystem extends JFrame {
             }
         });
 
-        displayButton.addActionListener(new ActionListener() {
+        displayButton.addActionListener(new ActionListener() { // button for displaying all information for a particular employee
             @Override
             public void actionPerformed(ActionEvent e) {
                 String empType = (String)employeeType.getSelectedItem();
 
                 if(empType.equals("Manager")){
+
                     Manager mg = new Manager();
+
+                    mg.setFirstname(textFirstName.getText());
+                    mg.setLastname(textLastName.getText());
+                    mg.setSSN(textSSN.getText());
+                    mg.setAddress(textAddress.getText());
+                    mg.setPhoneNum(textPhoneNum.getText());
+
+                    if(performanceCheckBox.isSelected()) {
+                        mg.setBonus(.03);
+                        mg.performaceBonus();
+                    }
+
+
                     JOptionPane.showMessageDialog(null,mg.Display());
+
                 }else if(empType.equals("Engineer")){
+
                     Engineer eg = new Engineer();
+
+                    eg.setFirstname(textFirstName.getText());
+                    eg.setLastname(textLastName.getText());
+                    eg.setSSN(textSSN.getText());
+                    eg.setAddress(textAddress.getText());
+                    eg.setPhoneNum(textPhoneNum.getText());
+
+                    if(newProductCheckBox.isSelected())
+                        eg.setSalary(eg.getSalary() + 10000);
+
                     JOptionPane.showMessageDialog(null,eg.Display());
+
                 }else if(empType.equals("Technician")){
+
                     Technician th = new Technician();
+
+                    th.setFirstname(textFirstName.getText());
+                    th.setLastname(textLastName.getText());
+                    th.setSSN(textSSN.getText());
+                    th.setAddress(textAddress.getText());
+                    th.setPhoneNum(textPhoneNum.getText());
+                    th.setOverTimeHours(Integer.parseInt(textOverTimeHours.getText()));
+
+
+
                     JOptionPane.showMessageDialog(null,th.Display());
                 }
 

@@ -14,8 +14,8 @@ public class Employee {
     private String SSN; // made a string since SSN's have -'s ex. 123-45-6789
     private int monthlyPay;
     private int annualSalary;
-    private int actualPay;
-    private int tax;
+    private double actualPay;
+    private double tax;
 
 
     public Employee(){ // constructor to initialize each variable created
@@ -26,7 +26,8 @@ public class Employee {
         SSN = "";
         monthlyPay = 0;
         annualSalary = 0;
-        tax = 20;
+        actualPay = 0.0;
+        tax = .20;
 
     }
 
@@ -40,18 +41,24 @@ public class Employee {
 
 
     public int calculateMonthlyPayment(int pay){ // method to calculate the particular employees monthly payment
-        monthlyPay = (pay/12) * tax;
+        int temp;
+        pay = pay/12;
+        temp = (int)(pay * tax);
+        monthlyPay = pay - temp;
         return monthlyPay;
     }
 
-    public int calculateAnnualSalary(){ // method to calculate the employees annual salary
-
-        return 0;
+    public int calculateAnnualSalary(int sal){ // method to calculate the employees annual salary
+        int temp = (int)(sal * tax);
+        annualSalary = sal - temp;
+        return annualSalary;
     }
 
-    public int calculateActualPay(){ // method to calculate the actual payment of an employee
-
-        return 0;
+    public double calculateActualPay(int sal){ // method to calculate the actual payment of an employee per hour of work in a work week
+        double temp = sal / 52; //divide the salary up by the amount of weeks in a year
+        temp = temp / 5; //  divide the salary up by the amount of hours worked one week a week
+        actualPay = temp / 8; // divide the salary up by amount of hours worked per day which is actual payment
+        return Math.round(actualPay);
     }
 
     public String Display(){
@@ -121,19 +128,19 @@ public class Employee {
         this.annualSalary = annualSalary;
     }
 
-    public int getActualPay() {
+    public double getActualPay() {
         return actualPay;
     }
 
-    public void setActualPay(int actualPay) {
+    public void setActualPay(double actualPay) {
         this.actualPay = actualPay;
     }
 
-    public int getTax() {
+    public double getTax() {
         return tax;
     }
 
-    public void setTax(int tax) {
+    public void setTax(double tax) {
         this.tax = tax;
     }
 
