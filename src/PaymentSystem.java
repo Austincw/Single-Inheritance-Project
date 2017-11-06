@@ -68,7 +68,7 @@ public class PaymentSystem extends JFrame {
                     eg.setPhoneNum(textPhoneNum.getText());
 
                     if(newProductCheckBox.isSelected())
-                        eg.setSalary(eg.getSalary() + 10000);
+                        eg.setSalary(eg.getSalary() + 10000); // adds $10,000 to the engineers salary if they have made a new product
 
                     JOptionPane.showMessageDialog(null,eg.Display());
 

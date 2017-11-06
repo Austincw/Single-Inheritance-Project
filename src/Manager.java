@@ -20,7 +20,7 @@ public class Manager extends Employee {
         this.performance = performance;
     }
 
-    public int performaceBonus(){
+    public int performaceBonus(){ // adds the calculated 3% performance bonus to the managers salary
         int temp = (int)(salary * bonus);
         salary = salary + temp;
         return salary;
