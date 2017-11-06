@@ -9,8 +9,6 @@ import java.awt.event.ActionListener;
 
 public class PaymentSystem extends JFrame {
 
-    static Employee emp;
-
     private JPanel panelMain;
     private JTextField textFirstName;
     private JComboBox employeeType;
@@ -57,7 +55,6 @@ public class PaymentSystem extends JFrame {
                         mg.performaceBonus();
                     }
 
-
                     JOptionPane.showMessageDialog(null,mg.Display());
 
                 }else if(empType.equals("Engineer")){
@@ -86,12 +83,9 @@ public class PaymentSystem extends JFrame {
                     th.setPhoneNum(textPhoneNum.getText());
                     th.setOverTimeHours(Integer.parseInt(textOverTimeHours.getText()));
 
-
-
                     JOptionPane.showMessageDialog(null,th.Display());
                 }
 
-                //JOptionPane.showMessageDialog(null, emp.Display());
             }
         });
 

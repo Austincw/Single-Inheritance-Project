@@ -21,7 +21,7 @@ public class Engineer extends Employee {
     }
 
     @Override
-    public String Display(){
+    public String Display(){ // display all related information for the Engineer
         return "Name: "+super.getFirstname()+" "+super.getLastname()+"\nAddress: "+super.getAddress()+"\nPhone number: "+super.getPhoneNum()+"\nSSN: "+super.getSSN()
                 +"\nMonthly Pay: $"+super.calculateMonthlyPayment(salary)+"\nAnnual Pay: $"+super.calculateAnnualSalary(salary)+"\nActual Pay: $"+super.calculateActualPay(super.getAnnualSalary())
                 +"\nTax: 20%";
